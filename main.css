@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  color: #fff;
+  padding: 20px;
+}
+
+.logo {
+  margin: 0;
+  margin-left: 20px;
+  font-size: 42px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 10px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+button {
+  border-radius: 7px;
+}
+
+footer {
+  background-color: #000000;
+  padding: 15px;
+  color: #fff;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.column {
+  flex-basis: 50%;
+}
+
+.column img {
+  width: 80%;
+  padding-top: 50px;
+}
+
+section {
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+.section-heading h2 {
+  font-size: 32px;
+  align-items: center;
+}
+
+.h2 {
+  margin-left: 500px;
+  padding: 30px;
+  font-size: 35px;
+}
+
+.column {
+  width: 30%;
+  float: left;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product {
+  width: 14%;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product img {
+  width: 60%;
+  max-height: 200px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.product h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.product p {
+  margin-bottom: 20px;
+}
+
+.product button {
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 640px) {
+  .product {
+    width: 100%;
+  }
+  .product img {
+    width: 45%;
+  }
+  .h2 {
+    margin: auto;
+  }
+  .product-container {
+    flex-direction: column;
+  }
+  .container {
+    display: flex;
+  }
+  header {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .product {
+    width: calc((100% - 8%) / 3);
+  }
+  .product img {
+    width: 70%;
+  }
+  .h2 {
+    margin: auto;
+  }
+  .container {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .product {
+    width: calc((70% - 5%) / 3);
+  }
+  .product img {
+    width: 80%;
+  }
+  .container {
+    display: flex;
+  }
+}
